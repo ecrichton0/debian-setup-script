@@ -1,6 +1,6 @@
 # debian-setup-script
 
-Very crude bash script to run after fresh installing debian. For server use, installs some basic tools + docker.
+Very crude bash script to make Debian useful. For server use, installs some basic tools + docker.
 
 Tested working on Debian 12
 
