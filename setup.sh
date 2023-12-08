@@ -95,6 +95,8 @@ groupadd docker
 
 usermod -aG docker debian
 
+sudo mkdir /docker
+
 printf "${RED}Rebooting Now${NC}\n"
 
 reboot now
