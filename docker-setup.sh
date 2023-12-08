@@ -1,5 +1,21 @@
 #!/bin/bash
 
+#Setting Colours
+NC='\033[0m'
+RED='\033[31m'
+BLUE='\033[34m'
+GREEN='\033[32m'
+YELLOW='\033[93m' #Techinally bright yellow
+GREENBG='\033[102m' #Technically bright green
+BLUEBG='\033[44m'
+REDBG='\033[41m'
+YELLOWBG='\033[103m'
+WHITEBG='\033[107m'
+WHITE='\033[97m'
+BLACK='\033[30m'
+
+#Script
+
 #Docker commands are straight from docker's website
 printf "${RED}Installing Docker${NC}\n"
 
