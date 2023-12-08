@@ -52,8 +52,6 @@ sleep 3
 
 groupadd docker
 
-
-
 usermod -aG docker $USERNAME
 
 sudo mkdir /docker
