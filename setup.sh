@@ -67,8 +67,6 @@ printf "${RED}Please enter your main user account username${NC}\n"
 
 read USERNAME
 
-export USERNAME
-
 printf "${RED}Adding User Account to sudoers file${NC}\n"
 
 sleep 3
