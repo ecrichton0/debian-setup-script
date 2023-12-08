@@ -77,7 +77,7 @@ sleep 3
 
 /sbin/adduser $USERNAME sudo
 
-read -p $"\e[32mDo you want to install Docker? (y/N)\e[0m\n" USERINPUT
+read -p $'\e[32mDo you want to install Docker? (y/N)\e[0m\n' USERINPUT
 case $USERINPUT in
     [Yy]* ) ./docker-setup.sh;;
     [Nn]* ) printf "${RED}Rebooting Now${NC}\n"; reboot now;; 
