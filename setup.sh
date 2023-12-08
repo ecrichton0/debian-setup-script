@@ -53,7 +53,7 @@ apt-get install snmpd
 
 printf "${RED}Copying snmp config files${NC}\n"
 
-rm -rf /etc/snmp/snmpd.conf
+rm -f /etc/snmp/snmpd.conf
 
 cp ./snmpd.conf /etc/snmp/snmpd.conf
 
@@ -63,11 +63,17 @@ sleep 3
 
 apt-get install sudo -y
 
+printf "${RED}Please enter your main user account username${NC}\n"
+
+read USERNAME
+
+export USERNAME
+
 printf "${RED}Adding User Account to sudoers file${NC}\n"
 
 sleep 3
 
-/sbin/adduser debian sudo
+/sbin/adduser $USERNAME sudo
 
 printf "${RED}Would you like to install Docker? (yes/NO)${NC}\n"
 
