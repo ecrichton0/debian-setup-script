@@ -55,3 +55,5 @@ groupadd docker
 usermod -aG docker debian
 
 sudo mkdir /docker
+
+exit
