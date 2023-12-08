@@ -45,6 +45,18 @@ sleep 3
 
 apt-get install htop -y
 
+printf "${RED}Installing snmpd${NC}\n"
+
+sleep 3
+
+apt-get install snmpd
+
+printf "${RED}Copying snmp config files${NC}\n"
+
+rm -rf /etc/snmp/snmpd.conf
+
+cp ./snmpd.conf /etc/snmp/snmpd.conf
+
 printf "${RED}Installing sudo${NC}\n"
 
 sleep 3
