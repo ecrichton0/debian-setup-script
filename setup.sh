@@ -49,13 +49,15 @@ printf "${RED}Installing snmpd${NC}\n"
 
 sleep 3
 
-apt-get install snmpd
+apt-get install snmpd -y
 
 printf "${RED}Copying snmp config files${NC}\n"
 
 rm -f /etc/snmp/snmpd.conf
 
 cp ./snmpd.conf /etc/snmp/snmpd.conf
+
+sleep 3
 
 printf "${RED}Installing sudo${NC}\n"
 
@@ -73,21 +75,11 @@ sleep 3
 
 /sbin/adduser $USERNAME sudo
 
-printf "${RED}Would you like to install Docker? (yes/NO)${NC}\n"
-
-read USERINPUT
-
-if [[$USERINPUT == "Yes" || $USERINPUT == "yes"]] then
-source ./docker-setup.sh
-
-printf "${RED}Rebooting Now${NC}\n"
-
-reboot now
-
-else
-printf "${RED}Rebooting Now${NC}\n"
-
-reboot now
-fi
+read -p "${RED}Do you want to install Docker? (y/N)${NC}\n" USERINPUT
+case $USERINPUT in
+    [Yy]* ) docker-setups.sh;;
+    [Nn]* ) printf "${RED}Rebooting Now${NC}\n"; reboot now;; 
+    * ) printf "${BLUE}Please Choose Yes or No${NC}\n";;
+esac
 
 exit

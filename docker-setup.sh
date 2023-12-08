@@ -58,4 +58,8 @@ usermod -aG docker $USERNAME
 
 sudo mkdir /docker
 
+printf "${RED}Rebooting Now${NC}\n"
+
+reboot now
+
 exit
