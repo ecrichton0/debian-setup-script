@@ -75,6 +75,11 @@ read USERINPUT
 
 if [[$USERINPUT == "Yes" || $USERINPUT == "yes"]] then
 source ./docker-setup.sh
+
+printf "${RED}Rebooting Now${NC}\n"
+
+reboot now
+
 else
 printf "${RED}Rebooting Now${NC}\n"
 
