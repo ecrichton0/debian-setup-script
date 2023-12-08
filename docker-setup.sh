@@ -52,7 +52,7 @@ sleep 3
 
 groupadd docker
 
-source setup.sh
+
 
 usermod -aG docker $USERNAME
 
