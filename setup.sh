@@ -1,8 +1,9 @@
 #!/bin/bash
-#Run as root by doing su -
 #Created by ecrichton0 on github
 #This source code is licensed under the GPL-3.0 license found in the
 #LICENSE file in the root directory of this source tree.
+
+#Run as root by doing su -
 
 #Setting Colours
 NC='\033[0m'
